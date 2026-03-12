@@ -1,0 +1,31 @@
+# Legislation Ingestion Service
+# Pulls legislation from Congress.gov, GovInfo, LegiScan, and OpenStates
+# Converts into git-style commits with full authorship attribution
+
+FROM node:18-alpine AS base
+WORKDIR /app
+
+# Install dependencies
+FROM base AS deps
+COPY package.json ./
+RUN npm install --production
+
+# Build
+FROM base AS build
+COPY package.json tsconfig.json ./
+COPY src/ ./src/
+RUN npm install && npm run build
+
+# Production
+FROM base AS production
+ENV NODE_ENV=production
+COPY --from=deps /app/node_modules ./node_modules
+COPY --from=build /app/dist ./dist
+COPY package.json ./
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+  CMD wget -qO- http://localhost:3006/health || exit 1
+
+EXPOSE 3006
+CMD ["node", "dist/index.js"]

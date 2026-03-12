@@ -5,3 +5,4 @@
 
 export * from './bill-management';
 export * from './crypto';
+export * from './legislation-tracking';
