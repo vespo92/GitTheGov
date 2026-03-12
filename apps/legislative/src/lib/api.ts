@@ -14,6 +14,7 @@ import {
   mergeBill,
   addCoSponsor,
 } from '@constitutional-shrinkage/governance-utils';
+import type { LegislationCommit, LegislationBlame } from '@constitutional-shrinkage/governance-utils';
 import { LawStatus } from '@constitutional-shrinkage/constitutional-framework';
 import type {
   Bill,
@@ -29,6 +30,7 @@ import type {
   Amendment,
 } from './types';
 import { mockBills, mockCitizen } from './mock-data';
+import { commitsByBillId, blameByBillId } from './mock-git-tracking';
 
 // Simulated API delay
 const simulateDelay = (ms: number = 300) => new Promise(resolve => setTimeout(resolve, ms));
@@ -324,6 +326,22 @@ export async function updateBillStatus(billId: string, status: LawStatus): Promi
 
   bills[billIndex] = { ...bills[billIndex], status };
   return bills[billIndex];
+}
+
+/**
+ * Fetch commit history for a bill
+ */
+export async function fetchBillCommits(billId: string): Promise<LegislationCommit[]> {
+  await simulateDelay();
+  return commitsByBillId[billId] || [];
+}
+
+/**
+ * Fetch blame data for a bill
+ */
+export async function fetchBillBlame(billId: string): Promise<LegislationBlame | null> {
+  await simulateDelay();
+  return blameByBillId[billId] || null;
 }
 
 /**

@@ -166,6 +166,12 @@ export default function BillDetailPage() {
               </button>
             )}
             <Link
+              href={`/bills/${bill.id}/history`}
+              className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50"
+            >
+              Git History
+            </Link>
+            <Link
               href={`/amendments/${bill.id}`}
               className="px-4 py-2 border border-gov-blue text-gov-blue rounded-lg hover:bg-blue-50"
             >
