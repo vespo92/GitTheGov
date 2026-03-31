@@ -1,0 +1,17 @@
+{
+  "name": "@constitutional-shrinkage/git-governance",
+  "version": "1.0.0",
+  "description": "Git primitives and version control for all government domains - budgets, regulations, executive orders, court decisions, and public records",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "lint": "eslint src/"
+  },
+  "dependencies": {
+    "@constitutional-shrinkage/entity-registry": "workspace:*",
+    "@constitutional-shrinkage/governance-utils": "workspace:*",
+    "@constitutional-shrinkage/government-api-framework": "workspace:*"
+  }
+}

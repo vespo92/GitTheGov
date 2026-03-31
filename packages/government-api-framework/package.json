@@ -1,0 +1,16 @@
+{
+  "name": "@constitutional-shrinkage/government-api-framework",
+  "version": "1.0.0",
+  "description": "Pluggable framework for integrating any government data API into the GitTheGov platform",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "lint": "eslint src/"
+  },
+  "dependencies": {
+    "@constitutional-shrinkage/entity-registry": "workspace:*",
+    "@constitutional-shrinkage/governance-utils": "workspace:*"
+  }
+}
