@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { MessageSquare, ThumbsUp, Pin, Lock, User } from 'lucide-react';
+import { MessageSquare, Pin, Lock, User } from 'lucide-react';
 import type { ForumPost as ForumPostType } from '@/types';
 import { formatRelativeTime } from '@/lib/utils';
 
@@ -66,11 +66,7 @@ export default function ForumPost({ post, showContent = false }: ForumPostProps)
         )}
 
         {/* Footer Stats */}
-        <div className="mt-3 pt-3 border-t border-gray-100 flex items-center space-x-4 text-sm text-gray-500">
-          <div className="flex items-center">
-            <ThumbsUp size={14} className="mr-1" />
-            {post.likes}
-          </div>
+        <div className="mt-3 pt-3 border-t border-gray-100 flex items-center text-sm text-gray-500">
           <div className="flex items-center">
             <MessageSquare size={14} className="mr-1" />
             {post.replies} replies

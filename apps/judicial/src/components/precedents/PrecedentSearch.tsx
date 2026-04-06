@@ -5,7 +5,7 @@ import { Card, CardHeader, CardContent } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { formatDate } from '@/lib/utils';
-import { Search, BookOpen, Star, ArrowRight } from 'lucide-react';
+import { Search, BookOpen, FileText, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import type { Precedent } from '@/types';
 
@@ -97,7 +97,7 @@ function PrecedentCard({ precedent }: { precedent: Precedent }) {
                 <Badge variant="default" size="sm">{precedent.subcategory}</Badge>
               )}
               <div className="flex items-center gap-1 text-judicial-secondary">
-                <Star className="h-4 w-4 fill-current" />
+                <FileText className="h-4 w-4" />
                 <span className="text-sm font-medium">{precedent.citations}</span>
               </div>
             </div>

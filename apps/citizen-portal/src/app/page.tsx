@@ -11,13 +11,13 @@ import {
 export default function Home() {
   return (
     <div className="max-w-6xl mx-auto">
-      {/* Hero Section */}
-      <div className="text-center py-12">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          Welcome to the Citizen Portal
+      {/* Header */}
+      <div className="py-8">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+          Citizen Portal
         </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Your gateway to direct democracy. Propose, vote, delegate, and shape the future of governance.
+        <p className="text-gray-600 dark:text-gray-300">
+          Bills, voting, delegations, and regional governance
         </p>
       </div>
 

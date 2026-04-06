@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { MessageSquare, Calendar, Heart, HelpCircle } from 'lucide-react';
+import { MessageSquare, Calendar, ClipboardList, HelpCircle } from 'lucide-react';
 import { mockForumTopics, mockForumPosts, mockEvents } from '@/lib/mock-data';
 import ForumPost from '@/components/community/ForumPost';
 import EventCard from '@/components/community/EventCard';
@@ -17,7 +17,7 @@ export default function CommunityPage() {
       <div>
         <h1 className="text-3xl font-bold text-gray-900">Community Hub</h1>
         <p className="mt-1 text-gray-600">
-          Connect, discuss, and engage with your regional community
+          Regional community forums, events, and feedback
         </p>
       </div>
 
@@ -32,7 +32,7 @@ export default function CommunityPage() {
           <span className="font-medium text-gray-900">Events</span>
         </Link>
         <Link href="/community/feedback" className="bg-white rounded-lg shadow-sm p-4 border border-gray-200 hover:border-pod-green-300 transition-colors text-center">
-          <Heart className="mx-auto text-red-500 mb-2" size={24} />
+          <ClipboardList className="mx-auto text-pod-green-500 mb-2" size={24} />
           <span className="font-medium text-gray-900">Feedback</span>
         </Link>
         <Link href="/help" className="bg-white rounded-lg shadow-sm p-4 border border-gray-200 hover:border-pod-green-300 transition-colors text-center">
@@ -60,12 +60,9 @@ export default function CommunityPage() {
                     href={`/community/forums/${topic.id}`}
                     className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors"
                   >
-                    <div className="flex items-center">
-                      <span className="text-2xl mr-3">{topic.icon}</span>
-                      <div>
-                        <p className="font-medium text-gray-900">{topic.name}</p>
-                        <p className="text-sm text-gray-500">{topic.description}</p>
-                      </div>
+                    <div>
+                      <p className="font-medium text-gray-900">{topic.name}</p>
+                      <p className="text-sm text-gray-500">{topic.description}</p>
                     </div>
                     <span className="text-sm text-gray-400">{topic.postCount} posts</span>
                   </Link>

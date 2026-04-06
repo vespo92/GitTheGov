@@ -38,12 +38,12 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="space-y-8 animate-fade-in">
+    <div className="space-y-8">
       {/* Page Header */}
       <div>
         <h1 className="text-3xl font-bold text-gray-900">Regional Dashboard</h1>
         <p className="mt-2 text-gray-600">
-          Welcome back! Here's what's happening in your region.
+          Regional overview and activity
         </p>
       </div>
 
@@ -171,17 +171,17 @@ export default function DashboardPage() {
       {/* Quick Actions */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Link href="/legislation/propose" className="bg-white rounded-lg shadow-sm p-6 border border-gray-200 hover:border-pod-green-300 transition-colors group">
-          <div className="text-3xl mb-3">📜</div>
+          <FileText size={24} className="mb-3 text-purple-600" />
           <h3 className="font-semibold text-gray-900 group-hover:text-pod-green-600">Propose Legislation</h3>
           <p className="text-sm text-gray-500 mt-1">Draft and submit new local legislation</p>
         </Link>
         <Link href="/coordination/requests" className="bg-white rounded-lg shadow-sm p-6 border border-gray-200 hover:border-pod-green-300 transition-colors group">
-          <div className="text-3xl mb-3">🤝</div>
+          <Users size={24} className="mb-3 text-amber-600" />
           <h3 className="font-semibold text-gray-900 group-hover:text-pod-green-600">Start Coordination</h3>
           <p className="text-sm text-gray-500 mt-1">Request inter-pod collaboration</p>
         </Link>
         <Link href="/map" className="bg-white rounded-lg shadow-sm p-6 border border-gray-200 hover:border-pod-green-300 transition-colors group">
-          <div className="text-3xl mb-3">🗺️</div>
+          <MapPin size={24} className="mb-3 text-pod-green-600" />
           <h3 className="font-semibold text-gray-900 group-hover:text-pod-green-600">Explore Map</h3>
           <p className="text-sm text-gray-500 mt-1">View regional pods on the map</p>
         </Link>
