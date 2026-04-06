@@ -10,10 +10,10 @@ interface FeedbackFormProps {
 }
 
 const feedbackTypes = [
-  { value: 'suggestion', label: 'Suggestion', icon: '💡' },
-  { value: 'complaint', label: 'Complaint', icon: '⚠️' },
-  { value: 'question', label: 'Question', icon: '❓' },
-  { value: 'praise', label: 'Praise', icon: '👏' },
+  { value: 'suggestion', label: 'Suggestion' },
+  { value: 'complaint', label: 'Complaint' },
+  { value: 'question', label: 'Question' },
+  { value: 'praise', label: 'Praise' },
 ] as const;
 
 export default function FeedbackForm({ podId, onSubmit }: FeedbackFormProps) {
@@ -67,7 +67,6 @@ export default function FeedbackForm({ podId, onSubmit }: FeedbackFormProps) {
                   : 'border-gray-200 hover:border-gray-300 text-gray-600'
               }`}
             >
-              <span className="mr-2">{ft.icon}</span>
               <span className="text-sm font-medium">{ft.label}</span>
             </button>
           ))}

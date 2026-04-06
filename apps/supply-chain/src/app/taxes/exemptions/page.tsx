@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowLeft, Shield, Heart, Zap, AlertTriangle, Star } from 'lucide-react';
+import { ArrowLeft, Shield, Cross, Zap, AlertTriangle, Globe } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardBody, CardDescription } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
@@ -11,7 +11,7 @@ const exemptions = [
     id: 'medical',
     name: 'Medical Necessities',
     description: 'Life-saving medications, medical devices, and healthcare supplies',
-    icon: Heart,
+    icon: Cross,
     color: 'text-red-500',
     bgColor: 'bg-red-100 dark:bg-red-900/20',
     reduction: 100,
@@ -44,7 +44,7 @@ const exemptions = [
     id: 'specialty',
     name: 'Regional Specialties',
     description: 'Products that can only be sourced from specific regions',
-    icon: Star,
+    icon: Globe,
     color: 'text-purple-500',
     bgColor: 'bg-purple-100 dark:bg-purple-900/20',
     reduction: 25,

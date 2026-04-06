@@ -249,10 +249,10 @@ export const mockLegislation: LocalLegislation[] = [
 ];
 
 export const mockForumTopics: ForumTopic[] = [
-  { id: 'topic-1', name: 'General Discussion', description: 'General community discussions', postCount: 156, icon: '💬' },
-  { id: 'topic-2', name: 'Local Issues', description: 'Discuss local pod issues', postCount: 89, icon: '🏘️' },
-  { id: 'topic-3', name: 'Policy Proposals', description: 'Discuss and propose new policies', postCount: 45, icon: '📜' },
-  { id: 'topic-4', name: 'Events & Meetups', description: 'Community events and gatherings', postCount: 32, icon: '📅' },
+  { id: 'topic-1', name: 'General Discussion', description: 'General community discussions', postCount: 156 },
+  { id: 'topic-2', name: 'Local Issues', description: 'Discuss local pod issues', postCount: 89 },
+  { id: 'topic-3', name: 'Policy Proposals', description: 'Discuss and propose new policies', postCount: 45 },
+  { id: 'topic-4', name: 'Events & Meetups', description: 'Community events and gatherings', postCount: 32 },
 ];
 
 export const mockForumPosts: ForumPost[] = [
@@ -265,7 +265,6 @@ export const mockForumPosts: ForumPost[] = [
     podId: 'pod-ca-sf',
     topicId: 'topic-3',
     createdAt: new Date('2024-11-15'),
-    likes: 24,
     replies: 12,
     tags: ['legislation', 'environment'],
   },
@@ -278,7 +277,6 @@ export const mockForumPosts: ForumPost[] = [
     podId: 'pod-ca-sf',
     topicId: 'topic-4',
     createdAt: new Date('2024-11-18'),
-    likes: 45,
     replies: 8,
     isPinned: true,
     tags: ['event', 'volunteer'],

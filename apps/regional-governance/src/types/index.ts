@@ -189,7 +189,6 @@ export interface ForumPost {
   topicId: string;
   createdAt: Date;
   updatedAt?: Date;
-  likes: number;
   replies: number;
   isPinned?: boolean;
   isLocked?: boolean;
